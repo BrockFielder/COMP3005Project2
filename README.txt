@@ -6,7 +6,7 @@ To install Assignment3Q1:
 2.) Open it in your favourite Python IDE
 3.) Ensure that psycopg2 is installed.
 4.) Ensure that Flask is installed
-5.) Create a new folder called 'templates' and place all the HTML files in it or just use the .zip file and extract them all and leave them in a folder one below where the project file is
+5.) Create a new folder called 'templates' and place all the HTML files in it or just use the .zip file and extract them all and leave them in a folder one below where the project file is. I couldn't create a any folders, I apologise, I do not know why GitHub is acting up, I just get an error message. I also will put a zip for SQL.
 6.) Run the program
 7.) Copy the link and put it in your favourite browser
 
