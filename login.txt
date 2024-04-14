@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... other head elements ... -->
+</head>
+<body>
+    <h1>Member Login</h1>
+    <form action="{{ url_for('login') }}" method="post">
+        <label for="member_id">Member ID:</label>
+        <input type="text" id="member_id" name="member_id" required>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Bookings</title>
+    <style>
+        body {
+            font-family: sans-serif; /* Keeping font standard */
+        }
+        .booking-management {
+            margin: 20px;
+            padding: 20px;
+        }
+        .booking-item {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-management">
+        <h1>Manage Bookings</h1>
+        {% for booking in bookings %}
+            <div class="booking-item">
+                <h2>Booking ID: {{ booking.ID }}</h2>
+                <p>Start Time: {{ booking.start_time }}</p>
+                <p>Duration: {{ booking.duration }}</p>
+                <p>Day: {{ booking.day }}</p>
+                <p>Year: {{ booking.year }}</p>
+                <p>Teacher: {{ booking.teacher }}</p>
+                <p>Members: {{ booking.members }}</p>
+                <p>Room ID: {{ booking.room_id }}</p>
+                <a href="{{ url_for('edit_booking', staff_id=staff.ID, booking_id=booking.ID) }}">Edit</a>
+                <a href="{{ url_for('delete_booking', staff_id=staff.ID, booking_id=booking.ID) }}">Delete</a>
+            </div>
+        {% else %}
+            <p>No bookings found.</p>
+        {% endfor %}
+        <div>
+            <a href="{{ url_for('new_booking', staff_id=staff.ID) }}">Create New Booking</a>
+        </div>
+        <div>
+            <a href="{{ url_for('staff_dashboard', staff_id=staff.ID) }}">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile</title>
+</head>
+<body>
+    <h1>Member Profile for {{ member_name }}</h1>
+    <!-- Display member details -->
+    <p>Email: {{ member_email }}</p>
+    <p>Goals: {{ member_goals }}</p>
+    <p>Achievements: {{ member_achievements }}</p>
+    <p>Routines: {{ member_routines }}</p>
+    <p>Previous Bills: {{ member_previous_bills }}</p>
+    <p>Billing Status: {{ member_billing_status }}</p>
+    <a href="{{ url_for('trainer_dashboard', trainer_id=trainer_id) }}"><button>Back to Dashboard</button></a>
+</body>
+</html>

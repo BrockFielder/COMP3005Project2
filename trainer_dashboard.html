@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Trainer Dashboard</h1>
+    <p>Trainer ID: {{ trainer_id }}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Trainer Dashboard</h1>
+    <p>Trainer ID: {{ trainer_id }}</p>
+
+    <!-- Schedule Management Form -->
+    <form action="{{ url_for('update_schedule', trainer_id=trainer_id) }}" method="post">
+        <h2>Update Availability</h2>
+        <div>
+            <label for="monday">Monday:</label>
+            <input type="text" id="monday" name="monday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="tuesday">Tuesday:</label>
+            <input type="text" id="tuesday" name="tuesday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="wednesday">Wednesday:</label>
+            <input type="text" id="wednesday" name="wednesday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="thursday">Thursday:</label>
+            <input type="text" id="thursday" name="thursday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="friday">Friday:</label>
+            <input type="text" id="friday" name="friday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="saturday">Saturday:</label>
+            <input type="text" id="saturday" name="saturday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <div>
+            <label for="sunday">Sunday:</label>
+            <input type="text" id="sunday" name="sunday" placeholder="e.g., 08:00-12:00">
+        </div>
+        <button type="submit">Update Schedule</button>
+    </form>
+</body>
+</html>
+
+
+</body>
+</html>

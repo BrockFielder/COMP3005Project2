@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Gym Booking Manager</h1>
+
+    <!-- Member Login Form -->
+    <form action="{{ url_for('member_login') }}" method="post">
+        <label for="member_id">Member ID:</label>
+        <input type="text" id="member_id" name="member_id" placeholder="Enter Member ID" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <hr>
+    <form action="{{ url_for('trainer_login') }}" method="post">
+        <label for="trainer_id">Trainer ID:</label>
+        <input type="text" id="trainer_id" name="trainer_id" placeholder="Enter Trainer ID" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <hr>
+
+    <form action="{{ url_for('staff_login') }}" method="post">
+        <label for="staff_id">Staff ID:</label>
+        <input type="text" id="staff_id" name="staff_id" placeholder="Enter Staff ID" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <form action="{{ url_for('create_member') }}" method="get">
+        <button type="submit">Sign Up</button>
+    </form>
+
+</body>
+</html>

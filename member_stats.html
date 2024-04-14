@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Stats</title>
+</head>
+<body>
+    <h1>Member Stats</h1>
+    {% if stats %}
+        <p>ID: {{ stats.ID }}</p>
+        <p>First Name: {{ stats.first_name }}</p>
+        <p>Last Name: {{ stats.last_name }}</p>
+        <!-- Display other stats as needed -->
+        <p>Email: {{ stats.email }}</p>
+        <p>Age: {{ stats.age }}</p>
+        <!-- Add more fields as required -->
+    {% else %}
+        <p>No data to display.</p>
+    {% endif %}
+</body>
+</html>

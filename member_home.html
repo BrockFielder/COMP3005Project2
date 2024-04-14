@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Home</title>
+</head>
+<body>
+    <h1>Welcome, {{ member.first_name }} {{ member.last_name }}!</h1>
+    <h2>Your Stats:</h2>
+    <p>Email: {{ member.email }}</p>
+    <p>Goals: {{ stats.goals }}</p>
+    <p>Achievements: {{ stats.achievements }}</p>
+    <p>Routines: {{ stats.routines }}</p>
+    <p>Previous Bills: {{ stats.previous_bills }}</p>
+    <p>Billing Status: {{ stats.billing_status }}</p>
+    <p>CL Booking: {{ stats.CL_booking }}</p>
+    <p>PT Booking: {{ stats.PT_booking }}</p>
+    <p>Age: {{ stats.age }}</p>
+    <p>Weight: {{ stats.weight }}</p>
+    <p>Sex: {{ stats.sex }}</p>
+    <p>Phone: {{ stats.phone }}</p>
+    <p>Blood Pressure: {{ stats.blood_pressure }}</p>
+    <p>Height: {{ stats.height }}</p>
+    <!-- More details can be added as needed -->
+
+    <form action="{{ url_for('create_booking', member_id=member.ID) }}" method="get">
+        <button type="submit">Create a Booking</button>
+    </form>
+
+<form action="{{ url_for('modify_member', member_id=member.ID) }}" method="get">
+    <button type="submit">Modify Your Stats</button>
+</form>
+</body>
+</html>
